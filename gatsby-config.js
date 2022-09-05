@@ -1,16 +1,17 @@
 module.exports = {
   siteMetadata: {
-    title: "나의 갯츠비.js 사이트",
+    title: "My Super Cool Blog",
   },
   plugins: [
     "gatsby-plugin-image",
     "gatsby-plugin-sharp",
     {
-      resolve: "gatsby-source-filesystem",
+      resolve: `gatsby-source-filesystem`,
       options: {
         name: `blog`,
-        path: `${__dirname}/blog`,
-      }
+        path: `${__dirname}/blog/`,
+      },
     },
+    "gatsby-plugin-mdx",
   ],
 };
